@@ -16,8 +16,9 @@ function createProduct() {
 
   //Generating new product tags.
   var newProduct = document.createElement("div");
+  //This was quite a long way to write this. Is there a better way?
   newProduct.innerHTML = "<div id='product-" + productNumber + "' class='product-wrapper'><span class='product-name'>" + productName + "</span><div><span class='dolar-sign'>$</span><span class='product-price'>" + floatPrice + "</span></div><div><label>Quantity</label><input type='number' name='qty' class='input product-qty' value='1' onchange='updateProductPrice()' /></div><div><span>$</span><span class='total-price'>" + floatPrice + "</span></div><div><button class='btn-delete' onclick='deleteProduct(`product-" + productNumber + "`)'>Delete</button></div></div>";
-
+  
   //Positioning and setting the new products.
   var parent = document.getElementsByTagName("body");
   var before = document.getElementsByClassName("calculate-price");
